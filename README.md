@@ -47,6 +47,7 @@ The app uses client-side routing to navigate between features and modern librari
 
 ## 📁 Folder Structure
 
+```
 
 /Users/mky1207/Desktop/practice projects/ez-projects/
 ├── .gitignore
@@ -91,6 +92,7 @@ The app uses client-side routing to navigate between features and modern librari
 ├── tsconfig.node.json
 └── vite.config.ts
 
+```
 
 
 ---
