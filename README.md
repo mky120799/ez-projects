@@ -2,14 +2,14 @@
 
 A React + TypeScript project built with Vite that demonstrates two commonly used UI patterns:
 
-- 🌳 **Tree View** (hierarchical data visualization)
-- 🗂️ **Kanban Board** (task management with drag & drop)
+-  **Tree View** (hierarchical data visualization)
+-  **Kanban Board** (task management with drag & drop)
 
 The app uses client-side routing to navigate between features and modern libraries for smooth UX.
 
 ---
 
-## 🚀 Features
+##  Features
 
 ### Tree View
 - Recursive tree structure
@@ -34,7 +34,7 @@ The app uses client-side routing to navigate between features and modern librari
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 
 - **React 18**
 - **TypeScript**
@@ -45,7 +45,7 @@ The app uses client-side routing to navigate between features and modern librari
 
 ---
 
-## 📁 Folder Structure
+##  Folder Structure
 
 ```
 
@@ -112,21 +112,21 @@ npm run build
 ```
 
 
-## 📦 Key Librarie
+##  Key Librarie
 
 -	react-router-dom – client-side routing
 -	@dnd-kit/core & @dnd-kit/sortable – drag & drop
 -	@dnd-kit/utilities – animations & transforms
 
 
-## 🧠 Architecture Notes
+##  Architecture Notes
 -	UI components are kept dumb
 -	Business logic lives in custom hooks
 -	State updates are immutable
 -	Drag & drop logic is centralized
 -	Designed to be easily extensible
 
-## 📌 Future Improvements
+##  Future Improvements
 -	Persist data (localStorage / backend)
 -	Drag & drop columns
 -	Keyboard accessibility
