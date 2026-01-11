@@ -50,7 +50,7 @@ export const KanbanBoard = () => {
         ))}
       </div>
 
-      {/* 🔥 THIS IS THE MAGIC */}
+      {/*  THIS IS THE MAIN LOGIC OF THE PROJECT */}
       <DragOverlay>
         {activeCard ? (
           <div className="kanban-card kanban-card--overlay">

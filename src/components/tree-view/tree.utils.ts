@@ -1,8 +1,8 @@
 import type { TreeNode } from "./tree.types";
 
-/* ======================================================
+/* 
    UPDATE NODE (generic recursive updater)
-====================================================== */
+ */
 export const updateNode = (
   nodes: TreeNode[],
   nodeId: string,
@@ -24,9 +24,9 @@ export const updateNode = (
   });
 };
 
-/* ======================================================
+/* 
    DELETE NODE (remove subtree)
-====================================================== */
+ */
 export const deleteNode = (nodes: TreeNode[], nodeId: string): TreeNode[] => {
   return nodes
     .filter((node) => node.id !== nodeId)
@@ -36,9 +36,9 @@ export const deleteNode = (nodes: TreeNode[], nodeId: string): TreeNode[] => {
     }));
 };
 
-/* ======================================================
+/* 
    EDIT NODE NAME
-====================================================== */
+ */
 export const editNodeName = (
   nodes: TreeNode[],
   nodeId: string,
@@ -50,9 +50,9 @@ export const editNodeName = (
   }));
 };
 
-/* ======================================================
+/*
    ADD CHILD NODE
-====================================================== */
+ */
 export const addChildNode = (
   nodes: TreeNode[],
   parentId: string,
@@ -65,9 +65,9 @@ export const addChildNode = (
   }));
 };
 
-/* ======================================================
+/* 
    DRAG & DROP HELPERS
-====================================================== */
+ */
 
 /* Remove a node and return it */
 export const removeNodeById = (
@@ -124,9 +124,9 @@ export const insertNode = (
   });
 };
 
-/* ======================================================
+/* 
    DRAG & DROP: FIND PARENT & INDEX
-====================================================== */
+*/
 export const findParentAndIndex = (
   nodes: TreeNode[],
   id: string,
@@ -144,9 +144,9 @@ export const findParentAndIndex = (
   return null;
 };
 
-/* ======================================================
+/* 
    DRAG & DROP: CHECK IF NODE IS DESCENDANT
-====================================================== */
+ */
 const isDescendant = (
   nodes: TreeNode[],
   ancestorId: string,
@@ -179,9 +179,9 @@ const isDescendant = (
   return false;
 };
 
-/* ======================================================
+/* 
    DRAG & DROP: MOVE NODE (REORDER / REPARENT)
-====================================================== */
+ */
 export const moveNode = (
   tree: TreeNode[],
   activeId: string,
