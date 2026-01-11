@@ -1,73 +1,136 @@
-# React + TypeScript + Vite
+# EZ Projects – Tree View & Kanban Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript project built with Vite that demonstrates two commonly used UI patterns:
 
-Currently, two official plugins are available:
+- 🌳 **Tree View** (hierarchical data visualization)
+- 🗂️ **Kanban Board** (task management with drag & drop)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app uses client-side routing to navigate between features and modern libraries for smooth UX.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### Tree View
+- Recursive tree structure
+- Expand / collapse nodes
+- Add & remove nodes
+- Clean, scalable folder structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Kanban Board
+- Multiple columns
+- Add / edit / delete cards
+- Drag & drop cards
+  - Reorder within a column
+  - Move cards across columns
+- Smooth drag animations using **@dnd-kit**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### General
+- React Router based navigation
+- Custom hooks for business logic
+- Mock API layer
+- Type-safe with TypeScript
+- Modular, industry-style folder structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧱 Tech Stack
+
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **React Router DOM**
+- **@dnd-kit**
+- **CSS (no UI library)**
+
+---
+
+## 📁 Folder Structure
+
+
+/Users/mky1207/Desktop/practice projects/ez-projects/
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├─] node_modules/ (ignored)
+├── package-lock.json
+├── package.json
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── App.css
+│   ├── App.tsx
+│   ├── assets/
+│   │   └── react.svg
+│   ├── components/
+│   │   ├── hooks/
+│   │   │   ├── useKanban.ts
+│   │   │   └── useTree.ts
+│   │   ├── kanban/
+│   │   │   ├── KanbanBoard.tsx
+│   │   │   ├── KanbanCard.tsx
+│   │   │   ├── KanbanColumn.tsx
+│   │   │   ├── kanban.mock.ts
+│   │   │   ├── kanban.styles.css
+│   │   │   ├── kanban.types.ts
+│   │   │   └── kanban.utils.ts
+│   │   ├── services/
+│   │   │   └── mockApi.ts
+│   │   └── tree-view/
+│   │       ├── TreeNodeItem.tsx
+│   │       ├── TreeView.tsx
+│   │       ├── tree.mock.ts
+│   │       ├── tree.styles.css
+│   │       ├── tree.types.ts
+│   │       └── tree.utils.ts
+│   ├── index.css
+│   └── main.tsx
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+
+
+---
+
+## 🛠️ Installation & Setup
+
+```
+# install dependencies
+npm install
+
+# start dev server
+npm run dev
+
+# build for production
+npm run build
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Key Librarie
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-	react-router-dom – client-side routing
+-	@dnd-kit/core & @dnd-kit/sortable – drag & drop
+-	@dnd-kit/utilities – animations & transforms
+
+
+## 🧠 Architecture Notes
+-	UI components are kept dumb
+-	Business logic lives in custom hooks
+-	State updates are immutable
+-	Drag & drop logic is centralized
+-	Designed to be easily extensible
+
+## 📌 Future Improvements
+-	Persist data (localStorage / backend)
+-	Drag & drop columns
+-	Keyboard accessibility
+-	Tree node drag & drop
+-	Better mobile support
+
+## License
+
+- This project is for learning and practice purposes.
