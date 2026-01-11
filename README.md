@@ -1,5 +1,5 @@
 # EZ Projects – Tree View & Kanban Board
-
+👉 access the live link [EZ- Project](https://ez-projects.onrender.com).
 A React + TypeScript project built with Vite that demonstrates two commonly used UI patterns:
 
 -  **Tree View** (hierarchical data visualization)
