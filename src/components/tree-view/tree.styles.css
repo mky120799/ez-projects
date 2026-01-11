@@ -1,0 +1,159 @@
+/* Tree Node Container */
+.tree-node {
+  position: relative;
+  margin-left: 0;
+}
+
+.tree-node-child {
+  margin-left: 20px;
+  position: relative;
+}
+
+/* Lines container */
+.tree-node-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Vertical lines for each parent level */
+.tree-node-line-vertical {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  background-color: #6b7280;
+  bottom: 0;
+  opacity: 0.6;
+}
+
+/* For last child, the last vertical line should stop at the horizontal connector */
+.tree-node-line-last {
+  bottom: auto;
+  height: 14px;
+}
+
+/* Horizontal connector line (L-shape) */
+.tree-node-line-horizontal {
+  position: absolute;
+  top: 13px; /* Align with middle of node content (half of min-height 28px) */
+  height: 2px;
+  background-color: #6b7280;
+  opacity: 0.6;
+  /* Width is set inline based on depth */
+}
+
+/* Content wrapper */
+.tree-node-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 28px;
+  z-index: 1;
+}
+
+/* Node body with content */
+.tree-node-body {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  flex: 1;
+  transition: background-color 0.2s;
+  margin-left: 0;
+}
+
+.tree-node-body:hover {
+  background-color: #f3f4f6;
+}
+
+/* Expand/collapse icon */
+.tree-node-expand {
+  width: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+/* Drag handle */
+.tree-node-drag-handle {
+  cursor: grab;
+  font-size: 14px;
+  color: #e3e5e8;
+  flex-shrink: 0;
+}
+
+.tree-node-drag-handle:active {
+  cursor: grabbing;
+}
+
+/* Node name */
+.tree-node-name {
+  flex: 1;
+  user-select: none;
+  color: #e9ebef;
+}
+
+/* Input for editing */
+.tree-node-input {
+  flex: 1;
+  padding: 2px 4px;
+  border: 1px solid #3b82f6;
+  border-radius: 2px;
+  outline: none;
+  font-size: inherit;
+}
+
+/* Action buttons */
+.tree-node-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  font-size: 14px;
+  color: #c9ccd3;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.tree-node-button:hover {
+  color: #111827;
+}
+
+/* Children container */
+.tree-node-children {
+  position: relative;
+}
+
+/* For deeper nesting levels, we need to draw additional vertical lines */
+.tree-node-child .tree-node-child::before {
+  left: -40px;
+}
+
+.tree-node-child .tree-node-child::after {
+  left: -40px;
+}
+
+.tree-node-child .tree-node-child .tree-node-child::before {
+  left: -60px;
+}
+
+.tree-node-child .tree-node-child .tree-node-child::after {
+  left: -60px;
+}
+
+/* Continue pattern for deeper nesting */
+.tree-node-child .tree-node-child .tree-node-child .tree-node-child::before {
+  left: -80px;
+}
+
+.tree-node-child .tree-node-child .tree-node-child .tree-node-child::after {
+  left: -80px;
+}

@@ -1,0 +1,77 @@
+.kanban-board {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+.add-button {
+  margin-bottom: 2px;
+}
+
+.kanban-column {
+  background: #74767a;
+  padding: 12px;
+  width: 250px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.kanban-column--over {
+  background: #8a8d92;
+  outline: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+.kanban-column > button {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.kanban-column-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.kanban-card {
+  background: rgb(154, 144, 144);
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kanban-card-delete {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  max-width: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.kanban-card--dragging {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.02);
+  cursor: grabbing;
+}
+
+.kanban-card--overlay {
+  background: rgb(154, 144, 144);
+  padding: 10px;
+  border-radius: 4px;
+  width: 230px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  cursor: grabbing;
+}
+
+.kanban-drag-handle {
+  cursor: grab;
+  user-select: none;
+}
